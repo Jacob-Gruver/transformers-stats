@@ -4,7 +4,7 @@
       <div class="d-flex flex-column align-items-center">
         <img
           alt="logo"
-          src="../assets/img/cw-logo.png"
+          src="../assets/img/tflogo.png"
           height="45"
         />
       </div>
@@ -29,7 +29,12 @@
         </li>
         <li class="nav-item">
           <router-link :to="{ name: 'About' }" class="nav-link">
-            About
+            Autobots
+          </router-link>
+        </li>
+        <li class="nav-item">
+          <router-link :to="{ name: 'About' }" class="nav-link">
+            Decepticons
           </router-link>
         </li>
       </ul>

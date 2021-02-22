@@ -1,8 +1,8 @@
 <template>
   <div class="home flex-grow-1 d-flex flex-column align-items-center justify-content-center">
-    <img src="https://bcw.blob.core.windows.net/public/img/8600856373152463" alt="CodeWorks Logo">
+    <img src="../assets/img/tf.png">
     <h1 class="my-5 bg-dark text-light p-3 rounded d-flex align-items-center">
-      <span class="mx-2 text-white">Vue 3 Starter</span>
+      <span class="mx-2 text-warning">Transformers Tech Spec</span>
     </h1>
   </div>
 </template>
@@ -21,5 +21,9 @@ export default {
     height: 200px;
     width: 200px;
   }
+  background-image: url(../assets/img/tfbackround.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 </style>
