@@ -4,16 +4,26 @@ import BaseController from '../utils/BaseController'
 
 export class TransformerController extends BaseController {
   constructor() {
-    super('autobots')
+    super('api/autobots')
     this.router
     //   .use(Auth0Provider.getAuthorizedUserInfo)
       .get('', this.getRobots)
+      .get('/:id', this.getOne)
   }
 
   async getRobots(req, res, next) {
     try {
-      const autoBots = await transformerService.getRobots(req.query)
-      res.send(autoBots)
+      const roBots = await transformerService.getRobots(req.query)
+      res.send(roBots)
+    } catch (error) {
+      next(error)
+    }
+  }
+
+  async getOne(req, res, next) {
+    try {
+      const roBot = await transformerService.getOne(req.params.id)
+      res.send(roBot)
     } catch (error) {
       next(error)
     }

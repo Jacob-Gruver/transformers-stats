@@ -3,17 +3,17 @@ import { dbContext } from '../db/DbContext'
 
 class TransformerService {
   async getRobots(query = {}) {
-    const values = await dbContext.Values.find(query)
-    return values
+    const roBots = await dbContext.Transformer.find(query)
+    return roBots
   }
 
-//   async findById(id) {
-//     const value = await dbContext.Values.findById(id)
-//     if (!value) {
-//       throw new BadRequest('Invalid Id')
-//     }
-//     return value
-//   }
+  async getOne(id) {
+    const roBot = await dbContext.Transformer.findById(id)
+    // if (!value) {
+    //   throw new BadRequest('Invalid Id')
+    // }
+    return roBot
+  }
 }
 
 export const transformerService = new TransformerService()

@@ -13,7 +13,7 @@ const Transformer = new Schema(
     courage: { type: Number, required: true },
     firepower: { type: Number, required: true },
     skill: { type: Number, required: true },
-    allegiance: { type: String, required: true }
+    allegiance: { type: Boolean, required: true }
     // imgURL: { type: }
     // creatorId: { type: String, ref: 'Account', required: true }
   },
