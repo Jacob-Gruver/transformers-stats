@@ -14,6 +14,11 @@ class TransformerService {
     // }
     return roBot
   }
+
+  async create(body) {
+    const res = await dbContext.Transformer.create(body)
+    return res
+  }
 }
 
 export const transformerService = new TransformerService()

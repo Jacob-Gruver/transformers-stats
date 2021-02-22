@@ -5,6 +5,7 @@ const Transformer = new Schema(
   {
     name: { type: String, required: true },
     description: { type: String, required: true },
+    form: { type: String, required: true },
     strength: { type: Number, required: true },
     intelligence: { type: Number, required: true },
     speed: { type: Number, required: true },

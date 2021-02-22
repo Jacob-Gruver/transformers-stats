@@ -9,6 +9,7 @@ export class TransformerController extends BaseController {
     //   .use(Auth0Provider.getAuthorizedUserInfo)
       .get('', this.getRobots)
       .get('/:id', this.getOne)
+      .post('', this.create)
   }
 
   async getRobots(req, res, next) {
@@ -24,6 +25,15 @@ export class TransformerController extends BaseController {
     try {
       const roBot = await transformerService.getOne(req.params.id)
       res.send(roBot)
+    } catch (error) {
+      next(error)
+    }
+  }
+
+  async create(req, res, next) {
+    try {
+      const newBot = await transformerService.create(req.body)
+      res.send(newBot)
     } catch (error) {
       next(error)
     }

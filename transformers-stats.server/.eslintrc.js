@@ -1,8 +1,8 @@
-const ALWAYS = 'always'
+// const ALWAYS = 'always'
 const NEVER = 'never'
 const ERROR = 2
 const WARN = 1
-const OFF = 0
+// const OFF = 0
 const PROD = process.env.NODE_ENV === 'production'
 
 module.exports = {
