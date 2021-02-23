@@ -3,14 +3,27 @@
     <img src="../assets/img/autobot.png">
     <img src="../assets/img/decepticon.png">
     <h1 class="my-5 bg-dark text-light p-3 rounded d-flex align-items-center">
-      <span class="mx-2 text-warning">Transformers Tech Spec</span>
+      <span class="mx-2 text-warning"><img src="../assets/img/tfword.gif"></span>
     </h1>
   </div>
 </template>
 
 <script>
+import { onMounted } from 'vue'
+import { logger } from '../utils/Logger'
+import { robotService } from '../services/RobotService'
+
 export default {
-  name: 'Home'
+  name: 'Home',
+  setup() {
+    onMounted(() => {
+      try {
+        robotService.getRobots()
+      } catch (error) {
+        logger.error(error)
+      }
+    })
+  }
 }
 </script>
 
@@ -21,6 +34,7 @@ export default {
   > img{
     height: 200px;
     width: 200px;
+    transform: rotateY(360deg);
   }
   background-image: url(../assets/img/tfbackround.jpg);
   background-position: center;

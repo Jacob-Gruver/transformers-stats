@@ -9,9 +9,6 @@ class TransformerService {
 
   async getOne(id) {
     const roBot = await dbContext.Transformer.findById(id)
-    // if (!value) {
-    //   throw new BadRequest('Invalid Id')
-    // }
     return roBot
   }
 

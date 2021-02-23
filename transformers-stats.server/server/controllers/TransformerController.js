@@ -1,12 +1,10 @@
-// import { Auth0Provider } from '@bcwdev/auth0provider'
 import { transformerService } from '../services/TransformerService'
 import BaseController from '../utils/BaseController'
 
 export class TransformerController extends BaseController {
   constructor() {
-    super('api/autobots')
+    super('api/transformers')
     this.router
-    //   .use(Auth0Provider.getAuthorizedUserInfo)
       .get('', this.getRobots)
       .get('/:id', this.getOne)
       .post('', this.create)
