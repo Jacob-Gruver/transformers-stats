@@ -40,13 +40,17 @@
             </div>
           </div>
           <input type="checkbox" id="checkBox" name="allegiance"> <p>Autobot or Decepticon?</p>
-          <button type="button" @click="addNewBug" class="btn btn-primary pt-2">
+          <button type="button" @click="addArobot" class="btn btn-primary pt-2">
             Create
           </button>
         </form>
       </div>
     </div>
-    <Transformers v-for="transformer in state.transformers " :key="transformer.id" :tf-prop="transformer" />
+    <div class="row">
+      <div class="col">
+        <Transformers v-for="transformer in state.transformers " :key="transformer.id" :tf-prop="transformer" />
+      </div>
+    </div>
   </div>
 </template>
 
@@ -76,7 +80,9 @@ export default {
       state,
       async addArobot() {
         try {
-          await robotService.addArobot(state.newTransformer)
+          debugger
+          const res = await robotService.addArobot(state.newTransformer)
+          logger.log('logging from About page', res)
         } catch (error) {
           logger.error(error)
         }

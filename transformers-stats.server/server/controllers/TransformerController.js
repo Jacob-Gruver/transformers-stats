@@ -13,7 +13,7 @@ export class TransformerController extends BaseController {
   async getRobots(req, res, next) {
     try {
       const roBots = await transformerService.getRobots(req.query)
-      res.send(roBots)
+      return res.send(roBots)
     } catch (error) {
       next(error)
     }

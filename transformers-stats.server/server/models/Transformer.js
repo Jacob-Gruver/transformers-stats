@@ -5,7 +5,7 @@ const Transformer = new Schema(
   {
     name: { type: String, required: true },
     description: { type: String, required: true },
-    form: { type: String, required: true },
+    form: { type: String, required: true }
     // strength: { type: Number, required: true },
     // intelligence: { type: Number, required: true },
     // speed: { type: Number, required: true },
@@ -14,7 +14,7 @@ const Transformer = new Schema(
     // courage: { type: Number, required: true },
     // firepower: { type: Number, required: true },
     // skill: { type: Number, required: true },
-    allegiance: { type: Boolean, required: true }
+    // allegiance: { type: Boolean, required: true }
     // imgURL: { type: }
     // creatorId: { type: String, ref: 'Account', required: true }
   },
