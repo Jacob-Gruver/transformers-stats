@@ -9,21 +9,9 @@
 </template>
 
 <script>
-import { onMounted } from 'vue'
-import { logger } from '../utils/Logger'
-import { robotService } from '../services/RobotService'
 
 export default {
-  name: 'Home',
-  setup() {
-    onMounted(() => {
-      try {
-        robotService.getRobots()
-      } catch (error) {
-        logger.error(error)
-      }
-    })
-  }
+  name: 'Home'
 }
 </script>
 
