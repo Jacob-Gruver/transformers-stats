@@ -12,13 +12,19 @@ const routes = [
     component: loadPage('HomePage')
   },
   {
-    path: '/about',
-    name: 'About',
+    path: '/tfcollection',
+    name: 'TfCollection',
     component: loadPage('AboutPage')
   },
   {
     path: '/account',
     name: 'Account',
+    component: loadPage('AccountPage'),
+    beforeEnter: authGuard
+  },
+  {
+    path: '/tecspec',
+    name: 'TfTechSpec',
     component: loadPage('AccountPage'),
     beforeEnter: authGuard
   }

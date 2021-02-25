@@ -1,5 +1,5 @@
 <template>
-  <div class="about pb-3 flex-grow-1 d-flex flex-column align-items-center justify-content-center">
+  <div class="TfCollection pb-3 flex-grow-1 d-flex flex-column align-items-center justify-content-center">
     <div class="row">
       <div class="col">
         <form>
@@ -48,7 +48,7 @@
     </div>
     <div class="row">
       <div class="col">
-        <Transformers v-for="transformer in state.transformers " :key="transformer.id" :tf-prop="transformer" />
+        <Transformers v-for="transformer in state.transformers" :key="transformer.id" :tf-prop="transformer" />
       </div>
     </div>
   </div>
@@ -62,7 +62,7 @@ import { robotService } from '../services/RobotService'
 import { AppState } from '../AppState'
 
 export default {
-  name: 'AboutPage',
+  name: 'TfCollection',
   setup() {
     // const router = useRouter()
     const state = reactive({
@@ -80,9 +80,8 @@ export default {
       state,
       async addArobot() {
         try {
-          debugger
-          const res = await robotService.addArobot(state.newTransformer)
-          logger.log('logging from About page', res)
+          const _id = await robotService.addArobot(state.newTransformer)
+          logger.log('logging from About page', _id)
         } catch (error) {
           logger.error(error)
         }

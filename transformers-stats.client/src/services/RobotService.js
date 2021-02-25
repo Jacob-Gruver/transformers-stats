@@ -17,8 +17,10 @@ class RobotService {
 
   async addArobot(newTf) {
     try {
+      debugger
       const res = await api.post(tfApi + '/', newTf)
       AppState.transformers = res.data
+      return res.data.id
     } catch (error) {
       logger.error(error)
     }
