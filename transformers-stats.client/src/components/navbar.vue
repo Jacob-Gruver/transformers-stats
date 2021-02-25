@@ -28,15 +28,15 @@
           </router-link>
         </li>
         <li class="nav-item">
-          <router-link :to="{ name: 'About' }" class="nav-link">
-            Autobots
+          <router-link :to="{ name: 'TfCollection' }" class="nav-link">
+            Robots
           </router-link>
         </li>
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <router-link :to="{ name: 'About' }" class="nav-link">
             Decepticons
           </router-link>
-        </li>
+        </li> -->
       </ul>
       <span class="navbar-text">
         <button

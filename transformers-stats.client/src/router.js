@@ -14,7 +14,7 @@ const routes = [
   {
     path: '/tfcollection',
     name: 'TfCollection',
-    component: loadPage('AboutPage')
+    component: loadPage('TfCollection')
   },
   {
     path: '/account',
@@ -25,7 +25,7 @@ const routes = [
   {
     path: '/tecspec',
     name: 'TfTechSpec',
-    component: loadPage('AccountPage'),
+    component: loadPage('TfTechSpec'),
     beforeEnter: authGuard
   }
 ]
