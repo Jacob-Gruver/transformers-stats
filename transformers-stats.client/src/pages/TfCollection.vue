@@ -39,6 +39,18 @@
               >
             </div>
           </div>
+          <!-- <div class="row p-2">
+            <div class="col-xs-4">
+              <input type="text"
+                     name="form"
+                     title="strength"
+                     class="form-control"
+                     placeholder="Add form"
+                     data-maxlength="150"
+                     v-model="state.newTransformer.strength"
+              >
+            </div>
+          </div> -->
           <input type="checkbox" id="checkBox" name="allegiance"> <p>Autobot or Decepticon?</p>
           <button type="button" @click="addArobot" class="btn btn-primary pt-2">
             Create
@@ -58,13 +70,13 @@
 import { computed, onMounted, reactive } from 'vue'
 import { logger } from '../utils/Logger'
 import { robotService } from '../services/RobotService'
-import { useRouter } from 'vue-router'
+// import { useRouter } from 'vue-router'
 import { AppState } from '../AppState'
 
 export default {
   name: 'TfCollection',
   setup() {
-    const router = useRouter()
+    // const router = useRouter()
     const state = reactive({
       transformers: computed(() => AppState.transformers),
       account: computed(() => AppState.account),
@@ -83,9 +95,9 @@ export default {
       state,
       async addArobot() {
         try {
-          const _id = await robotService.addArobot(state.newTransformer)
-          router.push({ name: 'techspec', id: _id })
-          logger.log('logging from About page', _id)
+          await robotService.addArobot(state.newTransformer)
+          // router.push({ name: 'techspec', id: _id })
+          // logger.log('logging from About page', _id)
         } catch (error) {
           logger.error(error)
         }
