@@ -67,7 +67,10 @@ export default {
     const router = useRouter()
     const state = reactive({
       transformers: computed(() => AppState.transformers),
-      newTransformer: {}
+      account: computed(() => AppState.account),
+      newTransformer: {
+
+      }
     })
     onMounted(() => {
       try {
