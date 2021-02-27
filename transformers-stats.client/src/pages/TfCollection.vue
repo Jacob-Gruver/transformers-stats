@@ -1,5 +1,5 @@
 <template>
-  <div class="TfCollection pb-3 flex-grow-1 d-flex flex-column align-items-center justify-content-center">
+  <div class="TfCollection pb-3 bg-dark flex-grow-1 d-flex flex-column align-items-center justify-content-center">
     <div class="row">
       <div class="col">
         <form>
@@ -39,19 +39,104 @@
               >
             </div>
           </div>
-          <!-- <div class="row p-2">
+          <div class="row p-2">
             <div class="col-xs-4">
               <input type="text"
-                     name="form"
+                     name="strength"
                      title="strength"
                      class="form-control"
-                     placeholder="Add form"
+                     placeholder="Add strength"
                      data-maxlength="150"
-                     v-model="state.newTransformer.strength"
+                     v-model="state.newTransformer.specs.strength"
               >
             </div>
-          </div> -->
-          <input type="checkbox" id="checkBox" name="allegiance"> <p>Autobot or Decepticon?</p>
+          </div>
+          <div class="row p-2">
+            <div class="col-xs-4">
+              <input type="text"
+                     name="intelligence"
+                     title="intelligence"
+                     class="form-control"
+                     placeholder="Add intelligence"
+                     data-maxlength="150"
+                     v-model="state.newTransformer.specs.intelligence"
+              >
+            </div>
+          </div><div class="row p-2">
+            <div class="col-xs-4">
+              <input type="text"
+                     name="speed"
+                     title="speed"
+                     class="form-control"
+                     placeholder="Add speed"
+                     data-maxlength="150"
+                     v-model="state.newTransformer.specs.speed"
+              >
+            </div>
+          </div><div class="row p-2">
+            <div class="col-xs-4">
+              <input type="text"
+                     name="endurance"
+                     title="endurance"
+                     class="form-control"
+                     placeholder="Add endurance"
+                     data-maxlength="150"
+                     v-model="state.newTransformer.specs.endurance"
+              >
+            </div>
+          </div><div class="row p-2">
+            <div class="col-xs-4">
+              <input type="text"
+                     name="rank"
+                     title="rank"
+                     class="form-control"
+                     placeholder="Add rank"
+                     data-maxlength="150"
+                     v-model="state.newTransformer.specs.rank"
+              >
+            </div>
+          </div><div class="row p-2">
+            <div class="col-xs-4">
+              <input type="text"
+                     name="courage"
+                     title="courage"
+                     class="form-control"
+                     placeholder="Add courage"
+                     data-maxlength="150"
+                     v-model="state.newTransformer.specs.courage"
+              >
+            </div>
+          </div><div class="row p-2">
+            <div class="col-xs-4">
+              <input type="text"
+                     name="firepower"
+                     title="firepower"
+                     class="form-control"
+                     placeholder="Add firepower"
+                     data-maxlength="150"
+                     v-model="state.newTransformer.specs.firepower"
+              >
+            </div>
+          </div><div class="row p-2">
+            <div class="col-xs-4">
+              <input type="text"
+                     name="skill"
+                     title="skill"
+                     class="form-control"
+                     placeholder="Add skill"
+                     data-maxlength="150"
+                     v-model="state.newTransformer.specs.skill"
+              >
+            </div>
+          </div>
+          <input type="checkbox"
+                 title="affiliation"
+                 class="form-control"
+                 v-model="state.newTransformer.affiliation"
+                 name="affiliation"
+          > <p class="text-light">
+            Autobot or Decepticon?
+          </p>
           <button type="button" @click="addArobot" class="btn btn-primary pt-2">
             Create
           </button>
@@ -81,7 +166,7 @@ export default {
       transformers: computed(() => AppState.transformers),
       account: computed(() => AppState.account),
       newTransformer: {
-
+        specs: {}
       }
     })
     onMounted(() => {
@@ -97,7 +182,7 @@ export default {
         try {
           await robotService.addArobot(state.newTransformer)
           // router.push({ name: 'techspec', id: _id })
-          // logger.log('logging from About page', _id)
+          // logger.log('logging from About page', state.newTransformer.affiliation)
         } catch (error) {
           logger.error(error)
         }
@@ -106,3 +191,10 @@ export default {
   }
 }
 </script>
+<style scoped lang="scss">
+.TfCollection{
+  background-image: url(../assets/img/bg_grid.jpg);
+  background-position: center;
+  background-size: cover;
+}
+</style>
