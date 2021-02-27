@@ -16,6 +16,7 @@ const Transformer = new Schema(
       firepower: { type: Number, required: true, default: 0 },
       skill: { type: Number, required: true, default: 0 }
     },
+    function: { type: String },
     affiliation: { type: Boolean, required: true, default: false },
     imgURL: { type: String }
   },

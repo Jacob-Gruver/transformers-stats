@@ -1,6 +1,7 @@
 <template>
   <div class="Transformers pb-3 mt-3 bg-dark flex-grow-1 d-flex flex-column align-items-center rounded justify-content-center">
     <img class="mt-3" v-if="tfProp.affiliation === true" src="../assets/img/autobot.png">
+    <!-- NOTE v-show is a better conditional rendering command -->
     <img class="mt-3" v-else src="../assets/img/decepticon.png">
 
     <div class="row">
