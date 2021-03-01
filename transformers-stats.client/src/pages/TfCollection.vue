@@ -128,6 +128,17 @@
                      v-model="state.newTransformer.specs.skill"
               >
             </div>
+          </div><div class="row p-2">
+            <div class="col-xs-4">
+              <input type="text"
+                     name="function"
+                     title="function"
+                     class="form-control"
+                     placeholder="Add function"
+                     data-maxlength="150"
+                     v-model="state.newTransformer.function"
+              >
+            </div>
           </div>
           <input type="checkbox"
                  title="affiliation"

@@ -1,8 +1,8 @@
 <template>
   <div class="home pb-3 flex-grow-1 d-flex flex-column align-items-center justify-content-center">
-    <img src="../assets/img/autobot.png">
-    <img src="../assets/img/decepticon.png">
-    <h1 class="my-5 bg-dark text-light p-3 rounded d-flex align-items-center">
+    <img type="button" @click="changeAffSym" class="pt-3" src="../assets/img/autobot.png">
+    <img type="button" class="pt-3" src="../assets/img/decepticon.png">
+    <h1 class="my-3 text-light p-3 rounded d-flex align-items-center">
       <span class="mx-2 text-warning"><img src="../assets/img/tfword.gif"></span>
     </h1>
   </div>
@@ -11,7 +11,15 @@
 <script>
 
 export default {
-  name: 'Home'
+  name: 'Home',
+  affSym: true,
+  setup() {
+    return {
+      changeAffSym() {
+      }
+
+    }
+  }
 }
 </script>
 

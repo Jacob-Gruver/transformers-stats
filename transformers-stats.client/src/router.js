@@ -23,7 +23,7 @@ const routes = [
     beforeEnter: authGuard
   },
   {
-    path: '/tecspec',
+    path: '/tftecspec',
     name: 'TfTechSpec',
     component: loadPage('TfTechSpec'),
     beforeEnter: authGuard

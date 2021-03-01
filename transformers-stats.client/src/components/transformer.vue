@@ -5,16 +5,16 @@
     <img class="mt-3" v-else src="../assets/img/decepticon.png">
 
     <div class="row">
-      <!-- <router-link :to="{ name: 'TfTechSpec', params: { id: tfProp.id } }"> -->
-      <div class="col">
-        <h3 class="my-2 text-light p-3 rounded d-flex align-items-center">
-          <span v-if="tfProp.affiliation === true" class="mx-2 text-warning"><h2>{{ tfProp.name }}</h2></span>
-          <span v-else class="mx-2 text-secondary"><h2>{{ tfProp.name }}</h2></span>
-        </h3>
-        <span v-if="tfProp.affiliation === true" class="mx-2 text-warning">{{ tfProp.description }}</span>
-        <span v-else class="mx-2 text-secondary">{{ tfProp.description }}</span>
-      </div>
-      <!-- </router-link> -->
+      <router-link :to="{ name: 'TfTechSpec', params: { id: tfProp.id } }">
+        <div class="col">
+          <h3 class="my-2 text-light p-3 rounded d-flex align-items-center">
+            <span v-if="tfProp.affiliation === true" class="mx-2 text-warning"><h2>{{ tfProp.name }}</h2></span>
+            <span v-else class="mx-2 text-secondary"><h2>{{ tfProp.name }}</h2></span>
+          </h3>
+          <span v-if="tfProp.affiliation === true" class="mx-2 text-warning">{{ tfProp.function }}</span>
+          <span v-else class="mx-2 text-secondary">{{ tfProp.function }}</span>
+        </div>
+      </router-link>
     </div>
   </div>
 </template>
@@ -30,8 +30,6 @@ export default {
     }
   },
   setup() {
-    // onMounted(() => {
-    //   })
     return {
 
     }
