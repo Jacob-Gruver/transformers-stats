@@ -127,6 +127,6 @@ a:hover {
   text-transform: uppercase;
 }
 .nav-item .nav-link.router-link-exact-active{
-  color: var(--primary);
+  color: var(--warning);
 }
 </style>
