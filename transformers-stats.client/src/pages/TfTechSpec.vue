@@ -1,5 +1,12 @@
 <template>
   <div class="TfTechSpec">
+    <div class="row">
+      <div class="col">
+        <h1 class="text-dark">
+          <span>{{ state.name }}</span>
+        </h1>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -18,8 +25,9 @@ export default {
     })
     onMounted(() => {
       try {
+        debugger
         const res = robotService.getOne(route.params.id)
-        logger.log('logging from the tftechspec page', res.data)
+        logger.log(AppState.transformer, res)
       } catch (error) {
         logger.error(error)
       }

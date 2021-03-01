@@ -33,12 +33,7 @@ export default {
   > img:hover{
     transition: transform 2s;
     transform: rotateY(180deg);
-    // transform: scale3d(0.5, 0.5);
   }
-  // .buttonSym{
-  //   transition: transform 2s;
-  //   transform: rotateY(180deg);
-  // }
 
   background-image: url(../assets/img/tfbackround.jpg);
   background-position: center;
