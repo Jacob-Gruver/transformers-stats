@@ -47,6 +47,10 @@ export default {
     width: 80px;
     transform: rotateY(360deg);
   }
+  > img:hover{
+    transition: transform 2s;
+    transform: rotateY(180deg);
+  }
 }
 
 </style>

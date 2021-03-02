@@ -2,9 +2,10 @@
   <div class="TfTechSpec">
     <div class="row">
       <div class="col">
-        <h1 class="text-dark">
+        <h1>
           <span>{{ state.name }}</span>
         </h1>
+        <span>{{ state.function }}</span>
       </div>
     </div>
   </div>
@@ -25,9 +26,8 @@ export default {
     })
     onMounted(() => {
       try {
-        debugger
-        const res = robotService.getOne(route.params.id)
-        logger.log(AppState.transformer, res)
+        robotService.getOne(route.params.id)
+        logger.log(AppState.transformer)
       } catch (error) {
         logger.error(error)
       }

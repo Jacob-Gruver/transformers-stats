@@ -1,7 +1,7 @@
 <template>
   <div class="home pb-3 flex-grow-1 d-flex flex-column align-items-center justify-content-center">
     <img class="my-5" src="../assets/img/autobot.png">
-    <img class="my-5" src="../assets/img/decepticon.png">
+    <!-- <img class="my-5" src="../assets/img/decepticon.png"> -->
     <h1 class="my-5 text-light p-3 rounded d-flex align-items-center">
       <span class="mx-2 text-warning"><img src="../assets/img/tfword.gif"></span>
     </h1>

@@ -166,13 +166,13 @@
 import { computed, onMounted, reactive } from 'vue'
 import { logger } from '../utils/Logger'
 import { robotService } from '../services/RobotService'
-// import { useRouter } from 'vue-router'
+import { useRouter } from 'vue-router'
 import { AppState } from '../AppState'
 
 export default {
   name: 'TfCollection',
   setup() {
-    // const router = useRouter()
+    const router = useRouter()
     const state = reactive({
       transformers: computed(() => AppState.transformers),
       account: computed(() => AppState.account),
@@ -191,9 +191,8 @@ export default {
       state,
       async addArobot() {
         try {
-          await robotService.addArobot(state.newTransformer)
-          // router.push({ name: 'techspec', id: _id })
-          // logger.log('logging from About page', state.newTransformer.affiliation)
+          const _id = await robotService.addArobot(state.newTransformer)
+          router.push({ name: 'TfTechSpec', id: _id })
         } catch (error) {
           logger.error(error)
         }
