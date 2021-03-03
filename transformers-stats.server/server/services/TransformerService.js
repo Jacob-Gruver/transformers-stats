@@ -3,18 +3,15 @@ import { dbContext } from '../db/DbContext'
 
 class TransformerService {
   async getRobots(query = {}) {
-    const roBots = await dbContext.Transformer.find(query)
-    return roBots
+    return await dbContext.Transformer.find(query)
   }
 
   async getOne(id) {
-    const roBot = await dbContext.Transformer.findById(id)
-    return roBot
+    return await dbContext.Transformer.findById(id)
   }
 
   async create(body) {
-    const res = await dbContext.Transformer.create(body)
-    return res
+    return await dbContext.Transformer.create(body)
   }
 }
 

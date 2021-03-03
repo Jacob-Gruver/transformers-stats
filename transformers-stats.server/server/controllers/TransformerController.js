@@ -21,8 +21,7 @@ export class TransformerController extends BaseController {
 
   async getOne(req, res, next) {
     try {
-      const roBot = await transformerService.getOne(req.params.id)
-      return res.send(roBot)
+      return res.send(await transformerService.getOne(req.params.id))
     } catch (error) {
       next(error)
     }

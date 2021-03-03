@@ -202,9 +202,9 @@ export default {
 }
 </script>
 <style scoped lang="scss">
-.TfCollection{
-  background-image: url(../assets/img/bg_grid.jpg);
-  background-position: center;
-  background-size: cover;
-}
+// .TfCollection{
+//   background-image: url(../assets/img/bg_grid.jpg);
+//   background-position: center;
+//   background-size: cover;
+// }
 </style>
