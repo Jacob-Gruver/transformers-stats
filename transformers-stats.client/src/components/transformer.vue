@@ -4,7 +4,7 @@
     <!-- NOTE v-show is a better conditional rendering command -->
     <img class="m-3" v-else src="../assets/img/decepticon.png">
 
-    <div class="row">
+    <div class="row jusify-content-center">
       <router-link :to="{ name: 'TfTechSpec', params: { id: tfProp.id } }">
         <div class="col">
           <h3 class="my-2 text-light p-3 rounded d-flex align-items-center">
