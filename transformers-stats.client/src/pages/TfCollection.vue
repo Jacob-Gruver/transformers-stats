@@ -1,8 +1,8 @@
 <template>
-  <div class="TfCollection pb-3 bg-dark flex-grow-1 d-flex flex-column align-items-center justify-content-center">
+  <div class="TfCollection pb-3 flex-grow-1 d-flex flex-column align-items-center justify-content-center">
     <div class="row">
       <div class="col">
-        <form>
+        <!-- <form>
           <div class="row p-2">
             <div class="col-xs-2">
               <input type="text"
@@ -153,10 +153,12 @@
           </button>
         </form>
       </div>
-    </div>
-    <div class="row">
-      <div class="col">
-        <Transformers v-for="transformer in state.transformers" :key="transformer.id" :tf-prop="transformer" />
+    </div> -->
+        <div class="row">
+          <div class="col">
+            <Transformers v-for="transformer in state.transformers" :key="transformer.id" :tf-prop="transformer" />
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -202,9 +204,7 @@ export default {
 }
 </script>
 <style scoped lang="scss">
-// .TfCollection{
-//   background-image: url(../assets/img/bg_grid.jpg);
-//   background-position: center;
-//   background-size: cover;
-// }
+.TfCollection{
+  background-image: url(../assets/img/bg-temp.jpg);
+}
 </style>
