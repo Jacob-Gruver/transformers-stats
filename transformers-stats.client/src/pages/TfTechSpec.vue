@@ -1,14 +1,36 @@
 <template>
-  <div class="TfTechSpec container-fluid">
-    <div class="bground1" style="backround-image: url('bg_grid2.jpg')">
-      <div class="row">
-        <div class="col">
-          <h1>
-            <span>{{ state.transformer.name }}</span>
-          </h1>
-          <span>{{ state.transformer.function }}</span>
-        </div>
+  <div class="TfTechSpec bground1 container-fluid" v-if="state.transformer.affiliation === true">
+    <div class="row text-warning bg-dark rounded m-3">
+      <div class="col p-3 mx-3">
+        <h1>
+          <span>{{ state.transformer.name }}</span>
+        </h1>
+        <span>{{ state.transformer.function }}</span>
+        <p>{{ state.transformer.description }}</p>
       </div>
+      <div class="col p-3 mx-3">
+        <p> {{ state.transformer.name }}'s Tech Specs </p>
+        <p> Strength: {{ state.transformer.specs.strength }}</p>
+        <p> Intelligence: {{ state.transformer.specs.intelligence }}</p>
+        <p> Speed: {{ state.transformer.specs.speed }}</p>
+        <p> Endurance: {{ state.transformer.specs.endurance }}</p>
+        <p> Rank: {{ state.transformer.specs.rank }}</p>
+        <p> Courage: {{ state.transformer.specs.courage }}</p>
+        <p> Firepower: {{ state.transformer.specs.firepower }}</p>
+        <p> Skill: {{ state.transformer.specs.skill }}</p>
+      </div>
+      <img class="m-3" src="../assets/img/autobot.png">
+    </div>
+  </div>
+  <div class=" TfTechSpec bground2 container-fluid" v-else>
+    <div class="row p-3">
+      <div class="col text-secondary bg-dark rounded mx-3">
+        <h1>
+          <span>{{ state.transformer.name }}</span>
+        </h1>
+        <span>{{ state.transformer.function }}</span>
+      </div>
+      <img src="../assets/img/decepticon.png">
     </div>
   </div>
 </template>
@@ -43,14 +65,23 @@ export default {
 
 <style scoped>
 .bground1{
+  background-image: url(../assets/img/bg_grid.jpg);
+  background-position: center;
+  background-size: cover;
+}
+ img{
+    height: 200px;
+    width: 200px;
+  }
+  img:hover{
+    transition: transform 2s;
+    transform: rotateY(180deg);
+  }
 
+.bground2{
   background-image: url(../assets/img/bg_grid2.jpg);
   background-position: center;
   background-size: cover;
-
 }
-/* img {
-  max-width: 100px;
-} */
 
 </style>
