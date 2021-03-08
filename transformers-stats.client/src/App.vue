@@ -11,6 +11,7 @@
   </main>
   <footer>
     <div class="bg-dark text-warning text-center p-4">
+      <span class="mx-2 text-warning"><img src="./assets/img/tfword.gif"></span>
       <span>
         <h4>
           Robots in Disguise

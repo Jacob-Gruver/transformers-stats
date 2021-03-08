@@ -1,10 +1,10 @@
 <template>
-  <div class="home pb-3 flex-grow-1 d-flex flex-column align-items-center justify-content-center">
+  <div class="home pb-5 flex-grow-1 d-flex flex-column align-items-center justify-content-center">
     <img class="my-5" src="../assets/img/autobot.png">
-    <!-- <img class="my-5" src="../assets/img/decepticon.png"> -->
-    <h1 class="my-5 bg-dark text-light p-3 d-flex align-items-center border border-danger">
+    <img class="my-5" src="../assets/img/decepticon.png">
+    <!-- <h1 class="my-5 bg-dark text-light p-3 d-flex align-items-center border border-danger">
       <span class="mx-2 text-warning"><img src="../assets/img/tfword.gif"></span>
-    </h1>
+    </h1> -->
   </div>
 </template>
 

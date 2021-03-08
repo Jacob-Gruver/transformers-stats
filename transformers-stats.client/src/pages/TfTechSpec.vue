@@ -5,11 +5,11 @@
         <h1>
           <span>{{ state.transformer.name }}</span>
         </h1>
-        <p>{{ state.transformer.form }}</p>
-        <span>{{ state.transformer.function }}</span>
+        <p> Vehicle Mode/ Alt Mode: {{ state.transformer.form }}</p>
+        <span> Function: {{ state.transformer.function }}</span>
         <p>{{ state.transformer.description }}</p>
       </div>
-      <div class="col p-3 mx-3">
+      <div class="col p-3 mx-3 text-italic">
         <p> {{ state.transformer.name }}'s Tech Specs </p>
         <p> Strength: {{ state.transformer.specs.strength }}</p>
         <p> Intelligence: {{ state.transformer.specs.intelligence }}</p>
@@ -29,8 +29,8 @@
         <h1>
           <span>{{ state.transformer.name }}</span>
         </h1>
-        <p>{{ state.transformer.form }}</p>
-        <span>{{ state.transformer.function }}</span>
+        <p> Vehicle Mode/ Alt Mode: {{ state.transformer.form }}</p>
+        <span> Function: {{ state.transformer.function }}</span>
         <p>{{ state.transformer.description }}</p>
       </div>
       <div class="col p-3 mx-3">
@@ -61,8 +61,10 @@ export default {
     const route = useRoute()
     const state = reactive({
       transformer: computed(() => AppState.transformer)
+
     })
     onMounted(() => {
+      logger.log(AppState.transformer)
       try {
         const res = robotService.getOne(route.params.id)
         logger.log(res)

@@ -9,7 +9,6 @@ class RobotService {
     try {
       const res = await api.get(tfApi)
       AppState.transformers = res.data
-      logger.log(AppState.transformers)
     } catch (error) {
       logger.error(error)
     }
@@ -29,6 +28,7 @@ class RobotService {
     try {
       const res = await api.get(tfApi + '/' + id)
       AppState.transformer = res.data
+      logger.log(AppState.transformer)
     } catch (error) {
       logger.error(error)
     }
