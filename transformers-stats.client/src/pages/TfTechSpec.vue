@@ -64,6 +64,7 @@ export default {
 
     })
     onMounted(() => {
+      debugger
       logger.log(AppState.transformer)
       try {
         const res = robotService.getOne(route.params.id)
