@@ -9,6 +9,8 @@ class RobotService {
     try {
       const res = await api.get(tfApi)
       AppState.transformers = res.data
+      logger.log('logging from the Robot service which gets all', res.data, 'Appstate =>', AppState.transformers)
+      // NOTE looks all good!
     } catch (error) {
       logger.error(error)
     }
@@ -27,8 +29,8 @@ class RobotService {
   async getOne(id) {
     try {
       const res = await api.get(tfApi + '/' + id)
-      logger.log(AppState.transformer)
       AppState.transformer = res.data
+      logger.log('logging from get one', AppState.transformer, 'result =>', res.data)
     } catch (error) {
       logger.error(error)
     }
