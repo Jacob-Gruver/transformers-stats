@@ -32,7 +32,7 @@ export default {
     transform: rotateY(180deg);
   }
 
-  background-image: url(../assets/img/test2.jpg);
+  background-image: url(../assets/img/homebg.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

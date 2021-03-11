@@ -1,5 +1,5 @@
 <template>
-  <div class="Transformers pb-3 mt-3 bg-dark flex-grow-1 d-flex border">
+  <div class="Transformers hover1 pb-3 mt-3 bg-dark flex-grow-1 d-flex border">
     <img class="m-3" v-if="tfProp.affiliation === true" src="../assets/img/autobot.png">
     <img class="m-3" v-else src="../assets/img/decepticon.png">
 
@@ -42,12 +42,16 @@ export default {
   > img{
     height: 80px;
     width: 80px;
-    transform: rotateY(360deg);
+    // transform: rotateY(360deg);
   }
   > img:hover{
     transition: transform 2s;
     transform: rotateY(180deg);
   }
+}
+.Transformers:hover{
+  transition: transform 2s;
+  transform: scale(1.1);
 }
 
 </style>
