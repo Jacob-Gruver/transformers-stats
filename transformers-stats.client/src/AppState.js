@@ -5,5 +5,16 @@ export const AppState = reactive({
   user: {},
   account: {},
   transformers: [],
-  transformer: {}
+  transformer: {
+    specs: {
+      strength: 0,
+      intelligence: 0,
+      speed: 0,
+      endurance: 0,
+      rank: 0,
+      courage: 0,
+      firepower: 0,
+      skill: 0
+    }
+  }
 })

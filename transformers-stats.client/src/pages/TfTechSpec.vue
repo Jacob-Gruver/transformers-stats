@@ -9,43 +9,21 @@
         <span> Function: {{ state.transformer.function }}</span>
         <p>{{ state.transformer.description }}</p>
       </div>
-      <div class="col p-3 mx-3 text-italic">
-        <div class="dropdown">
-          <button class="btn dropdown-toggle" data-toggle="dropdown">
-            {{ state.transformer.name }}'s Tech Specs
-          </button>
-          <div class="dropdown-menu">
-            <p class="dropdown-item">
-              Strength: {{ state.transformer.specs.strength }}
-            </p>
-            <p class="dropdown-item">
-              Intelligence: {{ state.transformer.specs.intelligence }}
-            </p>
-            <p class="dropdown-item">
-              Speed: {{ state.transformer.specs.speed }}
-            </p>
-            <p class="dropdown-item">
-              Endurance: {{ state.transformer.specs.endurance }}
-            </p>
-            <p class="dropdown-item">
-              Rank: {{ state.transformer.specs.rank }}
-            </p>
-            <p class="dropdown-item">
-              Courage: {{ state.transformer.specs.courage }}
-            </p>
-            <p class="dropdown-item">
-              Firepower: {{ state.transformer.specs.firepower }}
-            </p>
-            <p class="dropdown-item">
-              Skill: {{ state.transformer.specs.skill }}
-            </p>
-          </div>
-        </div>
+      <div class="col p-3 mx-3">
+        <p> {{ state.transformer.name }}'s Tech Specs </p>
+        <p> Strength: {{ state.transformer.specs.strength }}</p>
+        <p> Intelligence: {{ state.transformer.specs.intelligence }}</p>
+        <p> Speed: {{ state.transformer.specs.speed }}</p>
+        <p> Endurance: {{ state.transformer.specs.endurance }}</p>
+        <p> Rank: {{ state.transformer.specs.rank }}</p>
+        <p> Courage: {{ state.transformer.specs.courage }}</p>
+        <p> Firepower: {{ state.transformer.specs.firepower }}</p>
+        <p> Skill: {{ state.transformer.specs.skill }}</p>
       </div>
       <img class="aff m-3" src="../assets/img/autobot.png">
     </div>
   </div>
-  <!-- <div class=" TfTechSpec bground2 container-fluid" v-else>
+  <div class=" TfTechSpec bground2 container-fluid" v-else>
     <div class="row text-primary bg-secondary border m-3">
       <div class="col p-3 mx-3">
         <h1>
@@ -68,7 +46,7 @@
       </div>
       <img class="aff m-3" src="../assets/img/decepticon.png">
     </div>
-  </div> -->
+  </div>
 </template>
 
 <script>
