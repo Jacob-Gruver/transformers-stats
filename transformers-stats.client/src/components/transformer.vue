@@ -42,16 +42,15 @@ export default {
   > img{
     height: 80px;
     width: 80px;
-    // transform: rotateY(360deg);
-  }
-  > img:hover{
-    transition: transform 2s;
-    transform: rotateY(180deg);
   }
 }
 .Transformers:hover{
   transition: transform 2s;
   transform: scale(1.1);
+  > img{
+    transition: transform 2s;
+    transform: rotateY(180deg);
+  }
 }
 
 </style>

@@ -18,7 +18,7 @@ const Transformer = new Schema(
     },
     function: { type: String, required: true, default: 'N/A' },
     affiliation: { type: Boolean, required: true, default: false },
-    imgURL: { type: String }
+    imgURL: { type: String, required: true, default: 'https://clipartart.com/images/free-clipart-black-and-white-electronic-cog.jpg' }
   },
   { timestamps: true, toJSON: { virtuals: true } }
 )

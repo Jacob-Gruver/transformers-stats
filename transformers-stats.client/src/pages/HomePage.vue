@@ -1,5 +1,5 @@
 <template>
-  <div class="home pb-5 flex-grow-1 d-flex flex-column align-items-center justify-content-center">
+  <div class="home pb-5 pt-5 mt-5 flex-grow-1 d-flex flex-column align-items-center justify-content-center">
     <img class="my-5" src="../assets/img/autobot.png">
     <img class="my-5" src="../assets/img/decepticon.png">
   </div>
